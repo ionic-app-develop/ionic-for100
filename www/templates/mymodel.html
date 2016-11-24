@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   
+    <link href="../lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/for100.css" rel="stylesheet">
+
+    <script src="../lib/ionic/js/ionic.bundle.min.js"></script>
+    <script src="../lib/ionic-modal-select/dist/ionic-modal-select.js"></script>
+    <script src="../lib/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../js/mymodel.js">
+    </script>
+
+  </head>
+
+  <body>
+    <ion-view class="animated fadeInUp" ng-app="ionicApp" ng-controller="mymodelCtrl">
+
+      <ion-header-bar align-title="center" class="bar-positive">
+        <div class="buttons">
+            <a class="button" href="../index.html">返回</a>
+        </div>
+        <h1 class="title">自定义模式</h1>
+      </ion-header-bar>
+
+      <ion-content class="content has-header padding">
+        <div class="stretch list">
+
+          <a class="item item-icon-left item-icon-right" modal-select ng-model="selectedTime" options="selectTime" hide-reset="true" cancel-button="取消" modal-title="自定义时间">
+            <div class="option">
+              {{option}}
+            </div>
+            <i class="icon ion-ios-alarm-outline"></i>
+            时间
+            <span class="item-note">
+            {{selectedTime}}秒
+            </span>
+            <i class="icon ion-ios-arrow-down"></i>
+          </a>
+
+          <a class="item item-icon-left item-icon-right" modal-select ng-model="selectedNum" options="selectNum" hide-reset="true" cancel-button="取消" modal-title="自定义题数">
+            <div class="option">
+              {{option}}
+            </div>
+            <i class="icon ion-calculator"></i>
+            题数
+            <span class="item-note">
+            {{selectedNum}}道
+            </span>
+            <i class="icon ion-ios-arrow-down"></i>
+          </a>
+
+          <a class="item item-icon-left item-icon-right" modal-select ng-model="selectedGrade" options="selectGrade" hide-reset="true" cancel-button="取消" modal-title="自定义难度">
+            <div class="option">
+              {{option}}
+            </div>
+            <i class="icon ion-arrow-graph-up-right"></i>
+            难度
+            <span class="item-note">
+            等级{{selectedGrade}}
+            </span>
+            <i class="icon ion-ios-arrow-down"></i>
+          </a>
+
+          <p style="margin-top:30px;">
+            <a class="button button-calm button-block" ng-click="sure(selectedTime,selectedNum,selectedGrade)" >确定
+            </a>
+          </p>
+
+        </div>
+      </ion-content>
+    </ion-view> 
+  </body>
+</html>

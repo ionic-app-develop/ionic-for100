@@ -1,0 +1,19 @@
+.round
+{
+border:15px solid transparent;
+width:auto;
+padding:10px 20px;
+-webkit-border-image:url(../img/border.png) 30 30 round; /* Safari 5 and older */
+-o-border-image:url(../img/border.png) 30 30 round; /* Opera */
+border-image:url(../img/border.png) 30 30 round;
+}
+
+.stretch
+{
+border:15px solid transparent;
+width:auto;
+padding:10px 20px;
+-webkit-border-image:url(../img/border.png) 30 30 stretch; /* Safari 5 and older */
+-o-border-image:url(../img/border.png) 30 30 stretch; /* Opera */
+border-image:url(../img/border.png) 30 30 stretch;
+}
