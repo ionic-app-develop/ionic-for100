@@ -1,19 +1,41 @@
 .round
 {
-border:15px solid transparent;
-width:auto;
-padding:10px 20px;
--webkit-border-image:url(../img/border.png) 30 30 round; /* Safari 5 and older */
--o-border-image:url(../img/border.png) 30 30 round; /* Opera */
-border-image:url(../img/border.png) 30 30 round;
+	border:15px solid transparent;
+	width:auto;
+	padding:10px 10px;
+	margin:10px 10px;
+	-webkit-border-image:url(../img/border.png) 30 30 round; /* Safari 5 and older */
+	-o-border-image:url(../img/border.png) 30 30 round; /* Opera */
+	border-image:url(../img/border.png) 30 30 round;
 }
 
 .stretch
 {
-border:15px solid transparent;
-width:auto;
-padding:10px 20px;
--webkit-border-image:url(../img/border.png) 30 30 stretch; /* Safari 5 and older */
--o-border-image:url(../img/border.png) 30 30 stretch; /* Opera */
-border-image:url(../img/border.png) 30 30 stretch;
+	border:15px solid transparent;
+	width:auto;
+	padding:10px 10px;
+	margin:10px 10px;
+	-webkit-border-image:url(../img/border.png) 30 30 stretch; /* Safari 5 and older */
+	-o-border-image:url(../img/border.png) 30 30 stretch; /* Opera */
+	border-image:url(../img/border.png) 30 30 stretch;
+}
+
+.list-black .item
+{
+	border-top-color: #aaa !important; 
+	color: #0066FF !important; 
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-bottom: 250px;
+}
+
+.flex-item {
+    margin: auto;
+    -webkit-align-self: center;
+    align-self: center;
 }

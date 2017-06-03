@@ -1,0 +1,73 @@
+<ion-view>
+
+  <ion-header-bar align-title="center" class="bar-positive">
+    <button class="button button-icon icon ion-settings" ng-click="set();"></button>
+    <h1 class="title" translate="main_title" ng-click="showBanner();">挑战100</h1>
+    <button class="button button-icon icon ion-android-share" ng-click="openPopover($event)"></button>
+  </ion-header-bar>
+
+  <ion-content class="content has-header padding center" overflow-scroll="false" >
+    <div>
+
+      <div style="text-align:center; margin:0 auto;width:300;height:300;">
+
+        <p>
+          <img ng-src={{imgurl}} alt="Pulpit rock" width="200" height="200" ng-model="imgurl">
+          </img>
+        </p>
+
+      </div>
+
+      <div style="text-align:center;">
+
+        <p style="margin-top: 40px;">
+          <button ng-click="choose();" class="button button-outline button-positive button-block" translate="model_choose">
+          挑战者模式
+          </button>
+          <button ng-click="mymodel();" class="button button-outline button-positive button-block" translate="model_my" style="margin-top: 20px;">自定义模式
+          </button>
+        </p>
+
+      </div>
+
+    </div>
+
+    <script id="my-popover.html" type="text/ng-template">
+      <ion-popover-view>
+        <ion-scroll  direction="y" style="height:auto;">  
+          <div class="list list-black">
+            <a class="item" href="javascript:;" translate="qrCode_gh" ng-click="qrCode_gh();">
+              我要吐槽
+            </a>
+            <a class="item" href="javascript:;" translate="qrCode" ng-click="qrCode();">
+              分享二维码
+            </a>
+            <a class="item" href="javascript:;" translate="wechat" ng-click="handle('0','send-link-thumb-local');">
+              分享到微信好友
+            </a>
+            <a class="item" href="javascript:;" translate="wechat_circle" ng-click="handle('1','send-link-thumb-local');">
+              分享到微信朋友圈
+            </a>
+            <a class="item" href="javascript:;" translate="QQ" ng-click="shareToQQ();">
+              分享到qq
+            </a>
+            <a class="item" href="javascript:;" translate="Qzone" ng-click="shareToQzone();">
+              分享到qq空间
+            </a>
+            <a class="item" href="javascript:;" translate="weibo" ng-click="shareToWeibo();">
+              分享到微博
+            </a>
+          </div>    
+        </ion-scroll>  
+      </ion-popover-view>
+    </script>
+
+   <!--  <script>
+      function onDeviceReady() {
+          keymob.initFromKeymobService('7030816955638476', true);
+      }
+      document.addEventListener('deviceready', onDeviceReady, false);
+    </script> -->
+
+  </ion-content>
+</ion-view>

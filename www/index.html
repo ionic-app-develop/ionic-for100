@@ -4,65 +4,46 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-   
+    
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
+    <!-- <link href="css/for100.min.css" rel="stylesheet"> -->
     <link href="css/for100.css" rel="stylesheet">
-
+   
     <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+    <!-- jquery 必须在 ionic.bundle.min.js 之后 -->
+    <script src="lib/jquery/jquery-1.11.3.min.js"></script>
+    <script src="lib/ngCordova/ng-cordova.min.js"></script>
+    <script src="lib/cordova-toast/toast.js"></script>
+    <script src="lib/ionic-modal-select/dist/ionic-modal-select.min.js"></script>
+    <script src="lib/qrgen/qrgen.js"></script>
+    <script src="lib/angular-translate/angular-translate.js"></script>
+    <script src="languages/en.js"></script>
+    <script src="languages/zh.js"></script>
+
     <script src="cordova.js"></script>
-    <script src="../plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js"></script>
-    <script src="js/for100.js">
-    </script>
+
+    <!-- <link href="css/ionic.app.css" rel="stylesheet"> -->
+
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/for100Ctrl.js"></script>
+    <script src="js/choose/chooseCtrl.js"></script>
+    <script src="js/mymodel/mymodelCtrl.js"></script>
+    <script src="js/answer/answerCtrl.js"></script>
+    <script src="js/score/scoreCtrl.js"></script>
+    <script src="js/settings/settingsCtrl.js"></script>
+    <script src="js/qrcode/qrcodeCtrl.js"></script>
+    <script src="js/qrcode_gh/qrcode_ghCtrl.js"></script> 
+    <!-- <script src="js/templates.js"></script> -->
+
+    <script src="lib/Ad/KeymobPlugin.js"></script>
 
   </head>
 
-  <body>
-    <ion-view class="animated bounceInDown" ng-app="ionicApp" ng-controller="for100Ctrl">
+  <body ng-app="app">
+    <ion-nav-view>
 
-      <ion-header-bar align-title="center" class="bar-positive">
-        <h1 class="title">挑战100</h1>
-      </ion-header-bar>
-
-      <ion-content class="content has-header padding center">
-        <div class="round">
-
-          <div style="text-align:center; margin:0 auto;width:300;height:300;">
-
-            <p>
-              <img ng-src={{imgurl}} alt="Pulpit rock" width="200" height="200" ng-model="imgurl">
-              </img>
-            </p>
-
-          </div>
-
-          <div style="text-align:center; margin:0 auto;">
-
-            <p>
-            <a href="templates/choose.html" class="button button-calm button-block">
-            挑战者模式
-            </a>
-            <a href="templates/mymodel.html" class="button button-calm button-block">自定义模式
-            </a>
-            </p>
-
-            <button onclick="window.plugins.socialsharing.share('Message only')">message only</button>
-
-          </div>
-
-        </div>
-      </ion-content>
-    </ion-view> 
-
-    <script type="text/ng-template" id="moreMenu">
-      <div class="triangle"></div>
-      <div class="ns-popover-tooltip" style="width:100px;">
-        <div class="list" style="margin-top:0;margin-bottom:0;">
-          <a class="item" ng-click="hidePopover();search();"> 搜索 </a>
-          <a class="item" ng-click="hidePopover();sort();"> 排序 </a>
-        </div>
-      </div>
-    </script>
-
+    </ion-nav-view>
   </body>
 </html>

@@ -1,0 +1,57 @@
+<ion-view>
+
+  <ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+        <a class="button icon-left ion-ios-arrow-left button-clear" ng-click="return();">
+        <span style="font-size: 15px;" translate="return">返回</span>
+        </a>
+    </div>
+    <h1 class="title" translate="answer_title">争分夺秒</h1>
+  </ion-header-bar>
+
+  <ion-content class="content has-header padding" overflow-scroll="false">
+    <div>
+
+      <div style="margin-left: 10px;margin-top: 10px;">
+        <p ng-if="seconds<10"> 
+          <span translate="remainTime">剩余时间</span>：0{{minutes}} : 0{{seconds}}
+        </p>
+        <p ng-if="seconds>=10"> 
+          <span translate="remainTime">剩余时间</span>：0{{minutes}} : {{seconds}}
+        </p>
+        <p>
+         <span translate="remainQuality">剩余题数</span>：{{totalnum}}
+        <p>
+      </div>
+
+      <div id="audio"></div>
+
+      <div style="text-align:center; margin:40px auto;">
+        <h3>{{question}}</h3>
+      </div>
+
+      <div style="text-align:center; margin:0 auto;margin-top:50px;">
+
+        <p>
+          <button id="a" class="button button-outline button-positive icon-right" ng-click="a();" style="width:120px;">A 
+          <span>{{aa}}</span>
+          </button>
+          <button id="b" class="button button-outline button-positive icon-right" ng-click="b();" style="width:120px;margin-left: 10px;">B 
+          <span>{{bb}}</span>
+          </button>
+        </p>
+
+        <p style="margin-top:10px;">
+          <button id="c" class="button button-outline button-positive icon-right" ng-click="c();" style="width:120px;">C
+          <span>{{cc}}</span>
+          </button>
+          <button id="d" class="button button-outline button-positive icon-right" ng-click="d();" style="width:120px;margin-left: 10px;">D
+          <span>{{dd}}</span>
+          </button>
+        </p>
+
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>  

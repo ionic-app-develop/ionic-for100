@@ -1,0 +1,102 @@
+<ion-view>
+
+  <ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+        <a class="button icon-left ion-ios-arrow-left button-clear" ng-click="return();">
+        <span style="font-size: 15px;" translate="index">首页</span>
+        </a>
+    </div>
+    <h1 class="title" translate="my_title">自定义模式</h1>
+  </ion-header-bar>
+
+  <ion-content class="content has-header padding" overflow-scroll="false">
+    <div class="list">
+      <span ng-if="langkey=='en'">
+        <a class="item item-icon-left item-icon-right" modal-select ng-model="selectedTime1" options="selectTime" hide-reset="true" cancel-button="cancel" modal-title="Self-defining Time">
+          <div class="option">
+            {{option}}
+          </div>
+          <i class="icon ion-ios-alarm-outline"></i>
+          <span translate="time">时间</span>
+          <span class="item-note">
+          {{selectedTime1}}<span translate="second">秒</span>
+          </span>
+          <i class="icon ion-ios-arrow-down"></i>
+        </a>
+
+        <a class="item item-icon-left item-icon-right" modal-select ng-model="selectedNum1" options="selectNum" hide-reset="true" cancel-button="cancel" modal-title="Self-defining Quantity">
+          <div class="option">
+            {{option}}
+          </div>
+          <i class="icon ion-calculator"></i>
+          <span translate="quantity">题数</span>
+          <span class="item-note">
+          {{selectedNum1}}<span translate="subject">道</span>
+          </span>
+          <i class="icon ion-ios-arrow-down"></i>
+        </a>
+
+        <a class="item item-icon-left item-icon-right" modal-select ng-model="selectedGrade1" options="selectGrade" hide-reset="true" cancel-button="cancel" modal-title="Self-defining Difficulty">
+          <div class="option">
+            {{option}}
+          </div>
+          <i class="icon ion-arrow-graph-up-right"></i>
+          <span translate="difficulty">难度</span>
+          <span class="item-note">
+            <span translate="grade">等级</span>{{selectedGrade1}}
+          </span>
+          <i class="icon ion-ios-arrow-down"></i>
+        </a>
+
+        <p style="margin-top:30px;">
+          <a class="button button-outline button-positive button-block" ng-click="sure1(selectedTime1,selectedNum1,selectedGrade1)" translate="confirm">确定
+          </a>
+        </p>
+      </span>
+
+      <span ng-if="langkey=='zh'">
+        <a class="item item-icon-left item-icon-right" modal-select ng-model="selectedTime" options="selectTime" hide-reset="true" cancel-button="取消" modal-title="自定义时间">
+          <div class="option">
+            {{option}}
+          </div>
+          <i class="icon ion-ios-alarm-outline"></i>
+          <span translate="time">时间</span>
+          <span class="item-note">
+          {{selectedTime}}<span translate="second">秒</span>
+          </span>
+          <i class="icon ion-ios-arrow-down"></i>
+        </a>
+
+        <a class="item item-icon-left item-icon-right" modal-select ng-model="selectedNum" options="selectNum" hide-reset="true" cancel-button="取消" modal-title="自定义题数">
+          <div class="option">
+            {{option}}
+          </div>
+          <i class="icon ion-calculator"></i>
+          <span translate="quantity">题数</span>
+          <span class="item-note">
+          {{selectedNum}}<span translate="subject">道</span>
+          </span>
+          <i class="icon ion-ios-arrow-down"></i>
+        </a>
+
+        <a class="item item-icon-left item-icon-right" modal-select ng-model="selectedGrade" options="selectGrade" hide-reset="true" cancel-button="取消" modal-title="自定义难度">
+          <div class="option">
+            {{option}}
+          </div>
+          <i class="icon ion-arrow-graph-up-right"></i>
+          <span translate="difficulty">难度</span>
+          <span class="item-note">
+            <span translate="grade">等级</span>{{selectedGrade}}
+          </span>
+          <i class="icon ion-ios-arrow-down"></i>
+        </a>
+
+        <p style="margin-top:30px;">
+          <a class="button button-outline button-positive button-block" ng-click="sure(selectedTime,selectedNum,selectedGrade)" translate="confirm">确定
+          </a>
+        </p>
+      </span>
+
+    </div>
+  </ion-content>
+</ion-view> 

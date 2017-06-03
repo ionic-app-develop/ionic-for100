@@ -1,0 +1,47 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+        <a class="button icon-left ion-ios-arrow-left button-clear" ng-click="return();">
+        <span style="font-size: 15px;" translate="index">首页</span>
+        </a>
+    </div>
+    <h1 class="title" translate="language_title" ng-click="showInterstitial();">语言设置</h1>
+  </ion-header-bar>
+  <ion-content class="padding has-header" style="text-align:center;">
+      <div>  
+        <p>
+          <button id="en" class="button button-outline button-positive icon-right" style="margin-top: 50px; width:250px;" ng-click="changeLanguage('en');" translate="Language_en">英文
+          </button>
+        </p>  
+        <p>
+          <button id="zh" class="button button-outline button-positive icon-right" style="margin-top: 20px; width:250px;" ng-click="changeLanguage('zh');" translate="Language_zh">中文
+          </button>
+        </p>    
+      </div>
+  </ion-content>
+
+  <!-- <script>
+    function onAdReceive(message) {
+        if (message.adtype == keymob.AdTypes.INTERSTITIAL) {
+            keymob.showInterstitial();
+        }
+        if (message.adtype == keymob.AdTypes.APPWALL) {
+            keymob.showAppWall();
+        }
+        if (message.adtype == keymob.AdTypes.VIDEO) {
+            keymob.showVideo();
+        }
+    }
+    function onReceiveFail(message) {
+        alert("load fail: " + message.adtype + "  " + message.adapter + " " + message.data);
+    }
+    function onDeviceReady() {
+        keymob.initFromKeymobService('5010011945235570', true);
+        document.addEventListener(keymob.AdEvent.ON_LOADED_SUCCESS, onAdReceive, false);
+        document.addEventListener(keymob.AdEvent.ON_LOADED_FAIL, onReceiveFail, false);
+    }
+  
+    document.addEventListener('deviceready', onDeviceReady, false);
+  </script> -->
+
+</ion-view>

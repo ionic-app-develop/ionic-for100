@@ -1,0 +1,48 @@
+<ion-view>
+
+  <ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+        <a class="button icon-left ion-ios-arrow-left button-clear" ng-click="return();">
+          <span style="font-size: 15px;" translate="index">首页</span>
+        </a>
+    </div>
+    <h1 class="title" translate="score_title">我的战绩</h1>
+  </ion-header-bar>
+
+  <ion-content class="content has-header padding" overflow-scroll="false">
+    <div>
+
+      <div style="margin-top: 10px;margin-left: 8px; margin-right: 8px;">
+        <p style="font-size: 16px;color: #0044BB;">
+        <span translate="score_difficulty"><b>难度等级</b></span>：{{grade}}
+        <span translate="score_level">级</span></br></br>
+        <span translate="score_totalcount"><b>总题数</b></span>：{{totalnum}}
+        <span translate="score_quantity">道</span></br></br>
+        <span translate="score_rquantity"><b>答对题数</b></span>：{{score}}
+        <span translate="score_quantity">道</span></br></br>
+        <span translate="score_usetime"><b>用时</b></span>：{{minutes}}
+        <span translate="score_minute">分</span>{{seconds}}
+        <span translate="score_second">秒</span></br></br>
+        <span translate="score_earn"><b>得分</b></span>：{{totalscore}} 
+        <span translate="score">分</span></br></br></br>
+            <span translate="score_min" ng-if="100*score/totalnum<60">
+                很遗憾，你还没及格哦，加油！
+            </span>
+            <span translate="score_middle" ng-if="100*score/totalnum>=60&&100*score/totalnum<100">
+                还不错，继续加油哦！
+            </span>
+            <span translate="score_high" ng-if="100*score/totalnum==100">
+                哇，高手，你一定是学霸。
+            </span>
+        </p>
+      </div>
+      <div style="margin-top: 40px;">
+        <p>
+          <button class="button button-outline button-positive button-block" ng-click="show();" translate="score_show">炫耀一下
+          </button>
+        </p>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>  
