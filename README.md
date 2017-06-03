@@ -7,7 +7,6 @@ ionic-for100
 
 「新浪云福利」1000云豆免费领！低成本、免运维、灵活、安全稳定，轻松应对业务爆发式增长，一起来用吧！ 注册地址：http://t.cn/R5oFIaD
 
-
 ### 最新技术福利
 
 免费视频教程百度云盘链接：
@@ -32,3 +31,7 @@ ionic入门视频 回复“ionic提取码”领取 提取码
 * 扫一扫下面的二维码或者搜索"全栈弄潮儿"
 
 <img src="https://github.com/Alex-0407/sinacloud-node/blob/master/fullstack-8cm.jpg" width="320px" style="display:inline;">
+
+### 扫一扫下载`挑战100`app
+
+<img src="https://github.com/Alex-0407/ionic-for100/blob/master/www/img/for100.jpg" width="320px" style="display:inline;">
